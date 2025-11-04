@@ -1,8 +1,8 @@
-# 🔥 Fine-Tuning CLIP for MNIST: A Text & Sketch Search App 🔥
+# 🔥 Fine-Tuning CLIP for MNIST: A Text & Sketch Search App 📱️
 
 This repository contains a Jupyter Notebook that walks through the entire process of **fine-tuning** OpenAI's CLIP model to understand handwritten digits.
 
-This project starts by demonstrating how pre-trained CLIP **fails** on a simple task like MNIST due to **domain mismatch**. It then implements a full fine-tuning pipeline to solve this problem, including debugging `nan` (Not a Number) training errors.
+This project starts by demonstrating how pre-trained CLIP **fails** on a simple task like MNIST due to **domain mismatch**. It then implements a full fine-tuning pipeline to solve this problem.
 
 The final result is a clean, **interactive Gradio app** for text-to-image and sketch-to-image search that works accurately on the newly-trained model.
 
