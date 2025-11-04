@@ -87,3 +87,18 @@ git lfs pull
 # 6. Install all the required Python libraries
 # (This uses the "shopping list" in requirements.txt)
 pip install -r requirements.txt
+```
+
+---
+
+## 📚 References & Links
+
+* **My Project Blog Post:** [**A Deep-Dive into Fine-Tuning CLIP on MNIST**](YOUR_BLOG_POST_LINK_HERE)
+    * A detailed write-up of this project, the domain mismatch problem.
+
+* **The Original CLIP Paper:** [**Learning Transferable Visual Models From Natural Language Supervision**](https://arxiv.org/abs/2103.00020)
+    * The foundational 2021 paper by Alec Radford, et al. (OpenAI) that introduced the CLIP model.
+
+* **Platform & Libraries:**
+    * [**Hugging Face Spaces**](https://huggingface.co/spaces): The platform used to host the live, interactive demo.
+    * [**Gradio**](https://www.gradio.app/): The Python library used to build the web app's UI.
