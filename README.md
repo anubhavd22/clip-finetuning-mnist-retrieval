@@ -21,18 +21,18 @@ You can try the final, fine-tuned app live on Hugging Face Spaces!
 
 ## 🎯 The Core Problem: Domain Mismatch
 
-Pre-trained CLIP was trained on millions of **photo-text pairs** from the internet, but not on simple, 28x28 black-and-white bitmaps. Because of this "domain mismatch," its understanding of a text prompt like `"a handwritten digit four"` is in a completely different part of the embedding space than its understanding of the *image* of a 4 from MNIST.
+Pre-trained CLIP was trained on millions of **photo-text pairs** from the internet, but not on simple, 28x28 black-and-white bitmaps. Because of this "domain mismatch," its understanding of a text prompt like `"a handwritten digit eight"` is in a completely different part of the embedding space than its understanding of the *image* of a 8 from MNIST.
 
 ### Before Fine-Tuning
 
-The pre-trained model consistently failed. The **UMAP plot** below shows that the text prompt for **"a handwritten digit four"** (the black diamond) lands much closer to the **cluster of "7" images** (grey dots) than the actual "4" cluster (green dots). This is why searching for "4" returned images of "7".
+The pre-trained model consistently failed. The **UMAP plot** below shows that the text prompt for **"a handwritten digit eight"** (the black diamond) lands much closer to the **cluster of "7" images** than the actual "8" cluster. This is why searching for "8" returned images of "4" and "7". The similar can be seen for hte sketch of "zero".
 
 ![Text search: Before Fine-Tuning](images/8_text.png)
 ![Sketch search: Before Fine-Tuning](images/0_sketch.png)
 
 ### After Fine-Tuning 🔥
 
-After fine-tuning the model on the MNIST training set, the model **"learns" the new domain**. The text and image embeddings are now correctly aligned. The same text prompt for **"a handwritten digit four"** now lands perfectly inside the **"4" image cluster**.
+After fine-tuning the model on the MNIST training set, the model **"learns" the new domain**. The text and image embeddings are now correctly aligned. The same text prompt for **"a handwritten digit eight"** now lands perfectly inside the **"8" image cluster**. The similar is observed for the sketch of "zero".
 
 ![Text search: After Fine-Tuning](images/8_text_finetuned.png)
 ![Sketch search: After Fine-Tuning](images/0_sketch_finetuned.png)
