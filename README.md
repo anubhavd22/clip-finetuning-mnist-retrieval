@@ -1,4 +1,4 @@
-# 🧠🔥 Fine-Tuning CLIP for MNIST: A Text & Sketch Search App
+# 🔥 Fine-Tuning CLIP for MNIST: A Text & Sketch Search App 🔥
 
 This repository contains a Jupyter Notebook that walks through the entire process of **fine-tuning** OpenAI's CLIP model to understand handwritten digits.
 
@@ -14,12 +14,8 @@ You can try the final, fine-tuned app live on Hugging Face Spaces!
 
 **[➡️ Click here to try the interactive demo!](YOUR_HF_SPACE_LINK_HERE)**
 
-*(This README shows screenshots of the app before and after fine-tuning)*
-
-| Before Fine-Tuning (Search for "8") | After Fine-Tuning (Search for "8") |
-| :---: | :---: |
-| ![Before Fine-Tuning](images/8_text.png) | ![After Fine-Tuning](images/8_sketch_finetuned.png) |
-| **Failure:** The model is confused by the domain mismatch. | **Success:** The model correctly retrieves images of '8'. |
+![How the app looks like: Text search- ](images/1.png)
+![How the app looks like: Sketch Search- ](images/2.png)
 
 ---
 
@@ -31,13 +27,15 @@ Pre-trained CLIP was trained on millions of **photo-text pairs** from the intern
 
 The pre-trained model consistently failed. The **UMAP plot** below shows that the text prompt for **"a handwritten digit four"** (the black diamond) lands much closer to the **cluster of "7" images** (grey dots) than the actual "4" cluster (green dots). This is why searching for "4" returned images of "7".
 
-![UMAP Plot Before Fine-Tuning](images/1.png)
+![Text search: Before Fine-Tuning](images/8_text.png)
+![Sketch search: Before Fine-Tuning](images/0_sketch.png)
 
-### After Fine-Tuning
+### After Fine-Tuning 🔥
 
 After fine-tuning the model on the MNIST training set, the model **"learns" the new domain**. The text and image embeddings are now correctly aligned. The same text prompt for **"a handwritten digit four"** now lands perfectly inside the **"4" image cluster**.
 
-![UMAP Plot After Fine-Tuning](images/2.png)
+![Text search: After Fine-Tuning](images/8_text_finetuned.png)
+![Sketch search: After Fine-Tuning](images/0_sketch_finetuned.png)
 
 ---
 
@@ -55,14 +53,13 @@ After fine-tuning the model on the MNIST training set, the model **"learns" the 
 
 This project is a single Jupyter Notebook. The easiest way to run it is to follow the cells in order.
 
-### 1. Setup
+### Setup
 
 First, clone this repository and set up the Python environment.
 
 ```bash
 # 1. Create a new Conda environment with Python 3.9
-# (The '-y' flag automatically says yes to the setup)
-conda create -n clip_env python=3.9 -y
+conda create -n clip_env python=3.9
 
 # 2. Activate the new environment
 conda activate clip_env
