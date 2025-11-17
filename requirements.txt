@@ -1,0 +1,16 @@
+# Core ML Libraries
+git+https://github.com/openai/CLIP.git
+torch
+torchvision
+
+# App & Plotting
+gradio
+numpy
+matplotlib
+seaborn
+umap-learn
+scikit-learn
+
+# Utilities
+Pillow
+tqdm
