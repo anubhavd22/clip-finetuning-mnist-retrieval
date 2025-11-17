@@ -287,5 +287,4 @@ with gr.Blocks(theme=gr.themes.Soft()) as app_interface:
     )
     
 # Launch the app
-if __name__ == "__main__":
-    app_interface.launch()
+app_interface.launch()
