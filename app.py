@@ -243,7 +243,6 @@ with gr.Blocks(theme=gr.themes.Soft()) as app_interface:
                     gr.Markdown("### Live UMAP Visualization")
                     plot_text = gr.Plot(
                         label="Embedding Space"
-                        # --- FIX: Removed height=500 ---
                     )
 
         # --- Sketch Search Tab ---
@@ -270,7 +269,6 @@ with gr.Blocks(theme=gr.themes.Soft()) as app_interface:
                     gr.Markdown("### Live UMAP Visualization")
                     plot_sketch = gr.Plot(
                         label="Embedding Space"
-                        # --- FIX: Removed height=500 ---
                     )
 
     # --- Event Handlers ---
@@ -287,8 +285,6 @@ with gr.Blocks(theme=gr.themes.Soft()) as app_interface:
         outputs=[gallery_sketch, plot_sketch],
         show_progress="full"
     )
-
-    # (Clear button handler is removed)
     
 # Launch the app
 if __name__ == "__main__":
